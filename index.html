@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick & Healthy Snacks | Chef's Corner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>Chef's Quick Snacks</h1>
+            </div>
+            <p>Delicious, healthy snacks ready in under 20 minutes using common kitchen ingredients</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container nav-container">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-page="home">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span class="nav-text">Home</span>
+                    </a>
+                    <div class="nav-description">Discover quick snack ideas</div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="recipes">
+                        <i class="fas fa-book nav-icon"></i>
+                        <span class="nav-text">Recipes</span>
+                    </a>
+                    <div class="nav-description">Browse all recipes</div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="regional">
+                        <i class="fas fa-globe-americas nav-icon"></i>
+                        <span class="nav-text">Regional</span>
+                    </a>
+                    <div class="nav-description">Explore global flavors</div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="reviews">
+                        <i class="fas fa-star nav-icon"></i>
+                        <span class="nav-text">Reviews</span>
+                    </a>
+                    <div class="nav-description">Read and write reviews</div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="favorites">
+                        <i class="fas fa-heart nav-icon"></i>
+                        <span class="nav-text">Favorites</span>
+                    </a>
+                    <div class="nav-description">Your saved recipes</div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="about">
+                        <i class="fas fa-info-circle nav-icon"></i>
+                        <span class="nav-text">About</span>
+                    </a>
+                    <div class="nav-description">Learn about our mission</div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="contact">
+                        <i class="fas fa-envelope nav-icon"></i>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                    <div class="nav-description">Get in touch with us</div>
+                </li>
+            </ul>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search recipes..." id="searchInput">
+            </div>
+        </div>
+        <div class="container mobile-search-container">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search recipes..." id="mobileSearchInput">
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Home Page -->
+        <section class="page-section active" id="home-page">
+            <section class="intro">
+                <h2>Quick & Healthy Snack Ideas</h2>
+                <p>As a seasoned chef, I know that hunger can strike at any moment. That's why I've developed these quick, delicious, and nutritious snack recipes that can be prepared in under 20 minutes using ingredients you likely already have in your kitchen.</p>
+                <p>Each recipe includes variations and substitutions to accommodate different dietary needs and preferences.</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Quick Recipes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Minutes Max</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Dietary Options</div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Recipes</button>
+                <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                <button class="filter-btn" data-filter="vegan">Vegan</button>
+                <button class="filter-btn" data-filter="gluten-free">Gluten-Free</button>
+                <button class="filter-btn" data-filter="high-protein">High-Protein</button>
+                <button class="filter-btn" data-filter="kid-friendly">Kid-Friendly</button>
+                <button class="filter-btn" data-filter="dessert">Dessert</button>
+            </div>
+            
+            <div class="recipes-container" id="recipesContainer">
+                <!-- Recipes will be loaded here -->
+            </div>
+            
+            <section class="newsletter">
+                <h2>Get Weekly Recipe Inspiration</h2>
+                <p>Join our newsletter and receive new quick snack recipes every week, along with cooking tips and exclusive content.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required id="newsletterEmail">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </section>
+        
+        <!-- Recipes Page -->
+        <section class="page-section" id="recipes-page">
+            <div class="intro">
+                <h2>All Recipes</h2>
+                <p>Browse our complete collection of quick and healthy snack recipes. Each recipe can be prepared in under 20 minutes with common kitchen ingredients.</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Recipes</button>
+                <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                <button class="filter-btn" data-filter="vegan">Vegan</button>
+                <button class="filter-btn" data-filter="gluten-free">Gluten-Free</button>
+                <button class="filter-btn" data-filter="high-protein">High-Protein</button>
+                <button class="filter-btn" data-filter="kid-friendly">Kid-Friendly</button>
+                <button class="filter-btn" data-filter="dessert">Dessert</button>
+            </div>
+            
+            <div class="recipes-container" id="allRecipesContainer">
+                <!-- All recipes will be loaded here -->
+            </div>
+        </section>
+        
+        <!-- Regional Recipes Page -->
+        <section class="page-section" id="regional-page">
+            <div class="intro">
+                <h2><i class="fas fa-globe-americas"></i> Regional Recipes</h2>
+                <p>Explore quick snack recipes from different cuisines around the world. Each region offers unique flavors and ingredients that can be adapted for quick preparation.</p>
+            </div>
+            
+            <div class="regions-container">
+                <div class="regions-grid" id="regionsGrid">
+                    <!-- Regional recipes will be loaded here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reviews Page -->
+        <section class="page-section" id="reviews-page">
+            <div class="intro">
+                <h2><i class="fas fa-star"></i> Recipe Reviews</h2>
+                <p>Share your experience with our recipes and read what others have to say. Your feedback helps us improve and helps other users find the perfect recipes for them.</p>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="review-form">
+                    <h3>Write a Review</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="reviewRecipe">Select Recipe</label>
+                            <select id="reviewRecipe" class="form-control" required>
+                                <option value="">Choose a recipe...</option>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewerName">Your Name</label>
+                            <input type="text" id="reviewerName" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating</label>
+                            <div class="star-rating" id="starRating">
+                                <span class="star" data-rating="1">★</span>
+                                <span class="star" data-rating="2">★</span>
+                                <span class="star" data-rating="3">★</span>
+                                <span class="star" data-rating="4">★</span>
+                                <span class="star" data-rating="5">★</span>
+                            </div>
+                            <input type="hidden" id="reviewRating" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Your Review</label>
+                            <textarea id="reviewText" class="form-control" placeholder="Share your experience with this recipe..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+                
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Reviews will be loaded here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Favorites Page -->
+        <section class="page-section" id="favorites-page">
+            <div class="favorites-header">
+                <h2><i class="fas fa-heart"></i> Your Favorite Recipes</h2>
+                <p>All your saved recipes in one place for easy access.</p>
+            </div>
+            
+            <div class="favorites-container" id="favoritesContainer">
+                <!-- Favorites will be loaded here -->
+            </div>
+        </section>
+        
+        <!-- About Page -->
+        <section class="page-section" id="about-page">
+            <div class="intro">
+                <h2>About Chef's Quick Snacks</h2>
+                <p>Welcome to Chef's Quick Snacks, your go-to resource for delicious, healthy snacks that can be prepared in under 20 minutes.</p>
+                
+                <h3 style="margin-top: 2rem; color: var(--tomato);">Our Mission</h3>
+                <p>We believe that eating healthy shouldn't be complicated or time-consuming. Our mission is to provide easy-to-follow recipes using common ingredients that you likely already have in your kitchen.</p>
+                
+                <h3 style="margin-top: 2rem; color: var(--tomato);">Meet the Chef</h3>
+                <p>With over 15 years of culinary experience, our head chef has developed these recipes with busy people in mind. Whether you're a student, working professional, or parent, these snacks will satisfy your cravings without compromising on nutrition or taste.</p>
+            </div>
+        </section>
+        
+        <!-- Contact Page -->
+        <section class="page-section" id="contact-page">
+            <div class="intro">
+                <h2>Contact Us</h2>
+                <p>Have questions, suggestions, or just want to say hello? We'd love to hear from you!</p>
+                
+                <div style="margin-top: 2rem; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: var(--tomato); margin-bottom: 1rem;">Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> Email: amaansaififs_cse24@its.edu.in</p>
+                    <p><i class="fas fa-phone"></i> Phone: +91 8076501861</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: 123 Culinary Street, Foodville</p>
+                    
+                    <h3 style="color: var(--tomato); margin-top: 2rem; margin-bottom: 1rem;">Follow Us</h3>
+                    <div class="social-links" style="justify-content: flex-start;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Chef's Quick Snacks</h3>
+                    <p>Delicious, healthy snacks ready in under 20 minutes using common kitchen ingredients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="recipes">All Recipes</a></li>
+                        <li><a href="#" class="nav-link" data-page="regional">Regional Recipes</a></li>
+                        <li><a href="#" class="nav-link" data-page="reviews">Reviews</a></li>
+                        <li><a href="#" class="nav-link" data-page="favorites">Favorites</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Vegetarian</a></li>
+                        <li><a href="#">Vegan</a></li>
+                        <li><a href="#">Gluten-Free</a></li>
+                        <li><a href="#">High-Protein</a></li>
+                        <li><a href="#">Kid-Friendly</a></li>
+                        <li><a href="#">Dessert</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> amaansaififs_cse24@its.edu.in</li>
+                        <li><i class="fas fa-phone"></i> +91 8076501861</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Foodville</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Chef's Quick Snacks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal for printing -->
+    <div class="modal" id="printModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closePrintModal">&times;</span>
+            <h2>Print Recipe</h2>
+            <p>Your recipe is ready to print! For best results, use the browser's print function.</p>
+            <p><strong>Tip:</strong> Select "Save as PDF" to save a digital copy.</p>
+            <div class="recipe-actions" style="margin-top: 2rem;">
+                <button class="btn btn-primary" id="confirmPrint">Print Now</button>
+                <button class="btn btn-secondary" id="cancelPrint">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for saving recipe -->
+    <div class="modal" id="saveModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeSaveModal">&times;</span>
+            <h2>Save Recipe</h2>
+            <p>Recipe saved to your favorites!</p>
+            <p>You can access your saved recipes from the "Favorites" section in the navigation menu.</p>
+            <div class="recipe-actions" style="margin-top: 2rem;">
+                <button class="btn btn-primary" id="viewFavorites">View Favorites</button>
+                <button class="btn btn-secondary" id="closeSave">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
