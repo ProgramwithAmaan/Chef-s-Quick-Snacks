@@ -1,1238 +1,366 @@
-// Recipe data
-        const recipes = [
-            {
-                id: 1,
-                title: "Avocado & Chickpea Smash",
-                icon: "fas fa-avocado",
-                time: "10 minutes",
-                difficulty: "Easy",
-                badge: "Chef's Pick",
-                categories: ["vegetarian", "gluten-free", "dairy-free"],
-                dietaryTags: ["Vegetarian", "Gluten-Free Option", "Dairy-Free"],
-                region: "mediterranean",
-                image: "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "1 ripe avocado",
-                    "1/2 can chickpeas, rinsed and drained",
-                    "1 tbsp lemon juice",
-                    "1 tbsp extra virgin olive oil",
-                    "Salt and pepper to taste",
-                    "Pinch of smoked paprika (optional)",
-                    "2 slices of whole-grain bread, toasted"
-                ],
-                instructions: [
-                    "In a medium bowl, add the chickpeas and roughly mash them with a fork.",
-                    "Halve the avocado, remove the pit, and scoop the flesh into the bowl.",
-                    "Add lemon juice, olive oil, salt, pepper, and paprika if using.",
-                    "Mash everything together until combined but still chunky.",
-                    "Taste and adjust seasoning.",
-                    "Spread generously on toasted bread."
-                ],
-                variations: [
-                    "<strong>For kids:</strong> Serve with whole-grain crackers instead of toast.",
-                    "<strong>Gluten-free:</strong> Use gluten-free bread or rice cakes.",
-                    "<strong>Extra protein:</strong> Add a tablespoon of Greek yogurt or tahini."
-                ]
-            },
-            {
-                id: 2,
-                title: "Apple \"Cookies\"",
-                icon: "fas fa-apple-alt",
-                time: "5 minutes",
-                difficulty: "Very Easy",
-                badge: "Kid Favorite",
-                categories: ["vegan", "gluten-free", "no-added-sugar", "kid-friendly"],
-                dietaryTags: ["Vegan Option", "Gluten-Free", "No Added Sugar"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 crisp apples (like Honeycrisp or Fuji)",
-                    "2 tbsp nut or seed butter (peanut, almond, or sunflower)",
-                    "2 tbsp mixed toppings: chopped nuts, seeds, coconut flakes, dark chocolate chips",
-                    "Pinch of cinnamon (optional)"
-                ],
-                instructions: [
-                    "Wash and dry the apples. Slice them horizontally into 1/2-inch thick rounds.",
-                    "Use a small knife or apple corer to remove the seeds from the center of each slice.",
-                    "Spread each apple round with a thin layer of nut butter.",
-                    "Sprinkle with your choice of toppings and a pinch of cinnamon if desired.",
-                    "Serve immediately."
-                ],
-                variations: [
-                    "<strong>For kids:</strong> Use peanut butter and mini chocolate chips.",
-                    "<strong>Nut-free:</strong> Use sunflower seed butter and seed toppings.",
-                    "<strong>Extra fancy:</strong> Drizzle with a tiny bit of honey or maple syrup."
-                ]
-            },
-            {
-                id: 3,
-                title: "Mediterranean Cucumber Boats",
-                icon: "fas fa-seedling",
-                time: "15 minutes",
-                difficulty: "Easy",
-                badge: "Low-Carb",
-                categories: ["vegetarian", "gluten-free", "low-carb"],
-                dietaryTags: ["Vegetarian", "Gluten-Free", "Low-Carb"],
-                region: "mediterranean",
-                image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "1 large English cucumber",
-                    "1/2 cup cherry tomatoes, diced",
-                    "1/4 cup crumbled feta cheese",
-                    "2 tbsp chopped Kalamata olives",
-                    "1 tbsp extra virgin olive oil",
-                    "1 tsp lemon juice",
-                    "1 tbsp fresh dill or parsley, chopped",
-                    "Salt and pepper to taste"
-                ],
-                instructions: [
-                    "Cut the cucumber in half lengthwise. Use a small spoon to scoop out some of the seeds, creating a \"boat\".",
-                    "In a small bowl, mix together the tomatoes, feta, olives, olive oil, lemon juice, and herbs.",
-                    "Season with salt and pepper to taste.",
-                    "Spoon the mixture into the cucumber boats.",
-                    "Slice each half into 2-3 pieces for easy serving."
-                ],
-                variations: [
-                    "<strong>Vegan:</strong> Omit feta or use vegan feta alternative.",
-                    "<strong>Extra protein:</strong> Add 1/4 cup cooked quinoa or chickpeas to the filling.",
-                    "<strong>For kids:</strong> Use milder cheese like mozzarella and skip the olives."
-                ]
-            },
-            {
-                id: 4,
-                title: "5-Minute Microwave Egg Cups",
-                icon: "fas fa-egg",
-                time: "5 minutes",
-                difficulty: "Very Easy",
-                badge: "High-Protein",
-                categories: ["gluten-free", "high-protein", "low-carb"],
-                dietaryTags: ["Gluten-Free", "High-Protein", "Low-Carb"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1598214887285-504f9045e06b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 large eggs",
-                    "1 tbsp milk or water",
-                    "2 tbsp chopped vegetables (bell pepper, spinach, mushrooms)",
-                    "1 tbsp shredded cheese (cheddar, mozzarella, or feta)",
-                    "Pinch of salt and pepper",
-                    "Cooking spray or oil"
-                ],
-                instructions: [
-                    "Lightly grease a microwave-safe mug or small bowl with cooking spray.",
-                    "Crack the eggs into the mug, add milk, and whisk with a fork.",
-                    "Stir in the vegetables, cheese, salt, and pepper.",
-                    "Microwave on high for 1 minute. Stir, then microwave for another 30-60 seconds until eggs are set.",
-                    "Let stand for 1 minute before eating."
-                ],
-                variations: [
-                    "<strong>Dairy-free:</strong> Omit cheese and use water instead of milk.",
-                    "<strong>For kids:</strong> Use mild cheese and finely chopped veggies.",
-                    "<strong>Extra flavor:</strong> Add a pinch of herbs like chives or parsley."
-                ]
-            },
-            {
-                id: 5,
-                title: "3-Ingredient Banana Oat Cookies",
-                icon: "fas fa-cookie",
-                time: "15 minutes",
-                difficulty: "Easy",
-                badge: "Vegan",
-                categories: ["vegan", "gluten-free", "no-added-sugar", "kid-friendly"],
-                dietaryTags: ["Vegan", "Gluten-Free Option", "No Added Sugar"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 ripe bananas, mashed",
-                    "1 cup rolled oats",
-                    "1/4 cup mix-ins: chocolate chips, nuts, or dried fruit",
-                    "Pinch of cinnamon (optional)"
-                ],
-                instructions: [
-                    "Preheat oven to 350°F (175°C). Line a baking sheet with parchment paper.",
-                    "In a bowl, mash the bananas until smooth.",
-                    "Stir in the oats and your choice of mix-ins until well combined.",
-                    "Drop tablespoon-sized portions onto the baking sheet and flatten slightly.",
-                    "Bake for 12-15 minutes until edges are golden.",
-                    "Let cool for a few minutes before serving."
-                ],
-                variations: [
-                    "<strong>Gluten-free:</strong> Use certified gluten-free oats.",
-                    "<strong>For kids:</strong> Use mini chocolate chips as mix-ins.",
-                    "<strong>Extra protein:</strong> Add a scoop of protein powder or 2 tbsp of nut butter."
-                ]
-            },
-            {
-                id: 6,
-                title: "Rainbow Veggie Wraps",
-                icon: "fas fa-carrot",
-                time: "10 minutes",
-                difficulty: "Easy",
-                badge: "Family Favorite",
-                categories: ["vegetarian", "vegan", "gluten-free", "kid-friendly"],
-                dietaryTags: ["Vegetarian", "Vegan Option", "Gluten-Free Option"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 large whole-wheat tortillas or wraps",
-                    "1/4 cup hummus or cream cheese",
-                    "1/2 cup mixed julienned vegetables (carrots, bell peppers, cucumber)",
-                    "Handful of spinach or lettuce",
-                    "1/4 avocado, sliced",
-                    "Optional: sprouts, shredded cabbage, fresh herbs"
-                ],
-                instructions: [
-                    "Lay the tortillas flat on a clean surface.",
-                    "Spread a thin layer of hummus or cream cheese over each tortilla, leaving a 1-inch border.",
-                    "Layer the vegetables, spinach, and avocado in the center of each tortilla.",
-                    "Fold in the sides, then tightly roll from the bottom up.",
-                    "Slice in half diagonally and serve immediately."
-                ],
-                variations: [
-                    "<strong>Gluten-free:</strong> Use gluten-free wraps or large lettuce leaves.",
-                    "<strong>Vegan:</strong> Use hummus instead of cream cheese.",
-                    "<strong>Extra protein:</strong> Add sliced turkey, chicken, or tofu."
-                ]
-            },
-            {
-                id: 7,
-                title: "Japanese Onigiri",
-                icon: "fas fa-rice",
-                time: "15 minutes",
-                difficulty: "Easy",
-                badge: "Asian Classic",
-                categories: ["vegetarian", "gluten-free"],
-                dietaryTags: ["Vegetarian", "Gluten-Free"],
-                region: "asian",
-                image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 cups cooked Japanese short-grain rice",
-                    "1 tbsp rice vinegar",
-                    "1 tsp sugar",
-                    "1 tsp salt",
-                    "Fillings: tuna mayo, pickled plum, or salmon",
-                    "Nori seaweed sheets, cut into strips"
-                ],
-                instructions: [
-                    "Mix rice vinegar, sugar, and salt in a small bowl.",
-                    "Add the mixture to warm cooked rice and mix gently.",
-                    "Wet your hands with water and rub with salt.",
-                    "Take a handful of rice, make an indentation, add filling, and shape into a triangle.",
-                    "Wrap with a strip of nori seaweed.",
-                    "Serve immediately or wrap for later."
-                ],
-                variations: [
-                    "<strong>Vegan:</strong> Use pickled plum or vegetable fillings.",
-                    "<strong>For kids:</strong> Use simple fillings like plain tuna or cheese.",
-                    "<strong>Extra flavor:</strong> Sprinkle with sesame seeds or furikake."
-                ]
-            },
-            {
-                id: 8,
-                title: "Mexican Street Corn Salad",
-                icon: "fas fa-corn",
-                time: "12 minutes",
-                difficulty: "Easy",
-                badge: "Mexican Favorite",
-                categories: ["vegetarian", "gluten-free"],
-                dietaryTags: ["Vegetarian", "Gluten-Free"],
-                region: "mexican",
-                image: "https://images.unsplash.com/photo-1570194065650-2f276eef1f4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 cups corn kernels (fresh, frozen, or canned)",
-                    "1/4 cup mayonnaise",
-                    "2 tbsp sour cream or Greek yogurt",
-                    "1/4 cup crumbled cotija or feta cheese",
-                    "1 tbsp lime juice",
-                    "1/2 tsp chili powder",
-                    "2 tbsp chopped cilantro",
-                    "Salt to taste"
-                ],
-                instructions: [
-                    "If using fresh corn, cook for 3-4 minutes until tender. Frozen corn should be thawed.",
-                    "In a medium bowl, mix mayonnaise, sour cream, lime juice, and chili powder.",
-                    "Add corn, cheese, and cilantro to the bowl. Mix well.",
-                    "Season with salt to taste.",
-                    "Serve immediately as a dip or side dish."
-                ],
-                variations: [
-                    "<strong>Vegan:</strong> Use vegan mayo and skip the cheese.",
-                    "<strong>Spicy:</strong> Add chopped jalapeño or hot sauce.",
-                    "<strong>Extra protein:</strong> Add black beans or grilled chicken."
-                ]
-            },
-            {
-                id: 9,
-                title: "Italian Bruschetta",
-                icon: "fas fa-bread-slice",
-                time: "10 minutes",
-                difficulty: "Easy",
-                badge: "Italian Classic",
-                categories: ["vegetarian", "vegan"],
-                dietaryTags: ["Vegetarian", "Vegan Option"],
-                region: "mediterranean",
-                image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "4 slices crusty bread",
-                    "2 large tomatoes, diced",
-                    "2 cloves garlic, minced",
-                    "1/4 cup fresh basil, chopped",
-                    "2 tbsp extra virgin olive oil",
-                    "1 tbsp balsamic vinegar",
-                    "Salt and pepper to taste"
-                ],
-                instructions: [
-                    "Toast the bread slices until golden and crisp.",
-                    "In a bowl, combine tomatoes, garlic, basil, olive oil, and balsamic vinegar.",
-                    "Season with salt and pepper to taste.",
-                    "Let the mixture sit for 5 minutes to allow flavors to meld.",
-                    "Spoon the tomato mixture onto the toasted bread slices.",
-                    "Serve immediately."
-                ],
-                variations: [
-                    "<strong>Extra flavor:</strong> Rub toasted bread with a garlic clove before adding topping.",
-                    "<strong>Protein boost:</strong> Add mozzarella cheese or white beans.",
-                    "<strong>For kids:</strong> Use milder cherry tomatoes and less garlic."
-                ]
-            },
-            {
-                id: 10,
-                title: "Indian Spiced Chickpeas",
-                icon: "fas fa-mortar-pestle",
-                time: "8 minutes",
-                difficulty: "Easy",
-                badge: "Indian Spice",
-                categories: ["vegan", "gluten-free", "high-protein"],
-                dietaryTags: ["Vegan", "Gluten-Free", "High-Protein"],
-                region: "indian",
-                image: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "1 can chickpeas, rinsed and drained",
-                    "1 tbsp olive oil",
-                    "1 tsp cumin seeds",
-                    "1/2 tsp turmeric powder",
-                    "1/2 tsp garam masala",
-                    "1/4 tsp chili powder (optional)",
-                    "Salt to taste",
-                    "Fresh cilantro for garnish"
-                ],
-                instructions: [
-                    "Heat oil in a pan over medium heat.",
-                    "Add cumin seeds and cook until they sizzle.",
-                    "Add chickpeas and all spices. Stir to coat evenly.",
-                    "Cook for 5-6 minutes, stirring occasionally.",
-                    "Season with salt to taste.",
-                    "Garnish with fresh cilantro and serve warm."
-                ],
-                variations: [
-                    "<strong>Extra creamy:</strong> Add 2 tbsp coconut milk or yogurt.",
-                    "<strong>For kids:</strong> Reduce or omit chili powder.",
-                    "<strong>Complete meal:</strong> Serve over rice or with naan bread."
-                ]
-            },
-            {
-                id: 11,
-                title: "Chocolate Avocado Mousse",
-                icon: "fas fa-blender",
-                time: "10 minutes",
-                difficulty: "Easy",
-                badge: "Healthy Dessert",
-                categories: ["vegan", "gluten-free", "no-added-sugar", "dessert"],
-                dietaryTags: ["Vegan", "Gluten-Free", "No Added Sugar", "Dessert"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 ripe avocados",
-                    "1/4 cup cocoa powder",
-                    "1/4 cup maple syrup or honey",
-                    "1 tsp vanilla extract",
-                    "Pinch of salt",
-                    "Optional toppings: berries, chopped nuts, coconut flakes"
-                ],
-                instructions: [
-                    "Cut the avocados in half, remove the pits, and scoop the flesh into a blender or food processor.",
-                    "Add cocoa powder, maple syrup, vanilla extract, and salt.",
-                    "Blend until completely smooth and creamy.",
-                    "Taste and adjust sweetness if needed.",
-                    "Chill for at least 30 minutes before serving.",
-                    "Top with your favorite toppings before serving."
-                ],
-                variations: [
-                    "<strong>For kids:</strong> Add a tablespoon of peanut butter for extra flavor.",
-                    "<strong>Extra rich:</strong> Use dark cocoa powder for a deeper chocolate flavor.",
-                    "<strong>Mint chocolate:</strong> Add 1/4 tsp peppermint extract."
-                ]
-            },
-            {
-                id: 12,
-                title: "Berry Yogurt Parfait",
-                icon: "fas fa-layer-group",
-                time: "5 minutes",
-                difficulty: "Very Easy",
-                badge: "Protein Packed",
-                categories: ["vegetarian", "gluten-free", "high-protein", "dessert", "kid-friendly"],
-                dietaryTags: ["Vegetarian", "Gluten-Free", "High-Protein", "Dessert", "Kid-Friendly"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "1 cup Greek yogurt",
-                    "1/2 cup mixed berries (fresh or frozen)",
-                    "2 tbsp granola",
-                    "1 tbsp honey or maple syrup",
-                    "Optional: chia seeds, flax seeds, or nuts"
-                ],
-                instructions: [
-                    "In a glass or bowl, layer half of the yogurt.",
-                    "Add a layer of mixed berries.",
-                    "Top with the remaining yogurt.",
-                    "Sprinkle with granola and drizzle with honey.",
-                    "Add optional seeds or nuts if using.",
-                    "Serve immediately or chill until ready to eat."
-                ],
-                variations: [
-                    "<strong>Vegan:</strong> Use plant-based yogurt and maple syrup.",
-                    "<strong>For kids:</strong> Use sweeter berries like strawberries and add mini chocolate chips.",
-                    "<strong>Tropical:</strong> Use mango, pineapple, and coconut flakes instead of berries."
-                ]
-            },
-            {
-                id: 13,
-                title: "No-Bake Energy Bites",
-                icon: "fas fa-battery-full",
-                time: "15 minutes",
-                difficulty: "Easy",
-                badge: "On-the-Go",
-                categories: ["vegan", "gluten-free", "no-added-sugar", "dessert"],
-                dietaryTags: ["Vegan", "Gluten-Free", "No Added Sugar", "Dessert"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "1 cup rolled oats",
-                    "1/2 cup nut or seed butter",
-                    "1/3 cup honey or maple syrup",
-                    "1/2 cup mix-ins (chocolate chips, dried fruit, nuts)",
-                    "1 tbsp chia seeds or flax seeds",
-                    "1 tsp vanilla extract",
-                    "Pinch of salt"
-                ],
-                instructions: [
-                    "In a medium bowl, combine all ingredients.",
-                    "Mix well until everything is evenly distributed.",
-                    "Chill the mixture in the refrigerator for 30 minutes.",
-                    "Roll into 1-inch balls.",
-                    "Store in an airtight container in the refrigerator.",
-                    "Enjoy as a quick snack or dessert!"
-                ],
-                variations: [
-                    "<strong>Chocolate coconut:</strong> Add cocoa powder and shredded coconut.",
-                    "<strong>Protein boost:</strong> Add a scoop of protein powder.",
-                    "<strong>For kids:</strong> Use mini chocolate chips and sweetened dried cranberries."
-                ]
-            },
-            {
-                id: 14,
-                title: "Frozen Banana Bites",
-                icon: "fas fa-snowflake",
-                time: "10 minutes",
-                difficulty: "Very Easy",
-                badge: "Kid Favorite",
-                categories: ["vegan", "gluten-free", "dessert", "kid-friendly"],
-                dietaryTags: ["Vegan", "Gluten-Free", "Dessert", "Kid-Friendly"],
-                region: "american",
-                image: "https://images.unsplash.com/photo-1603052875180-8d8d769203a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                ingredients: [
-                    "2 ripe bananas",
-                    "1/2 cup chocolate chips",
-                    "1 tsp coconut oil",
-                    "Optional toppings: chopped nuts, shredded coconut, sprinkles"
-                ],
-                instructions: [
-                    "Slice bananas into 1/2-inch thick rounds.",
-                    "Place on a parchment-lined baking sheet and freeze for 1 hour.",
-                    "Melt chocolate chips with coconut oil in the microwave or double boiler.",
-                    "Dip each frozen banana slice in melted chocolate.",
-                    "Sprinkle with toppings if desired.",
-                    "Return to freezer until chocolate is set (about 15 minutes).",
-                    "Store in an airtight container in the freezer."
-                ],
-                variations: [
-                    "<strong>Peanut butter:</strong> Spread a thin layer of peanut butter on banana slices before dipping in chocolate.",
-                    "<strong>White chocolate:</strong> Use white chocolate chips instead of dark chocolate.",
-                    "<strong>For parties:</strong> Use colorful sprinkles for a festive look."
-                ]
-            }
-        ];
+  // Hide loading overlay after page loads
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const loadingOverlay = document.getElementById('loadingOverlay');
+      if (loadingOverlay) {
+        loadingOverlay.classList.add('hide');
+        // Remove from DOM after animation
+        setTimeout(function() {
+          loadingOverlay.style.display = 'none';
+        }, 500);
+      }
+    }, 2000); // 2 seconds loading animation
+  });
 
-        // Regional data
-        const regions = [
-            {
-                id: "mediterranean",
-                name: "Mediterranean",
-                flag: "🏺",
-                description: "Fresh, vibrant flavors from Southern Europe",
-                color: "#3498DB"
-            },
-            {
-                id: "american",
-                name: "American",
-                flag: "🍔",
-                description: "Classic comfort foods with a healthy twist",
-                color: "#E74C3C"
-            },
-            {
-                id: "asian",
-                name: "Asian",
-                flag: "🍜",
-                description: "Quick bites inspired by East Asian cuisine",
-                color: "#F1C40F"
-            },
-            {
-                id: "mexican",
-                name: "Mexican",
-                flag: "🌮",
-                description: "Bold, zesty flavors from south of the border",
-                color: "#27AE60"
-            },
-            {
-                id: "indian",
-                name: "Indian",
-                flag: "🍛",
-                description: "Aromatic spices and vibrant vegetarian options",
-                color: "#E67E22"
-            }
-        ];
+  // ============================================
+  // EMAILJS CONFIGURATION
+  // ============================================
+  // Step 1: Initialize EmailJS with your Public Key
+  emailjs.init("opYYBAzptYXVZypkl");  // 🔴 REPLACE THIS with your EmailJS Public Key
+  
+  // Step 2: Set your Service ID and Template ID
+  const EMAILJS_SERVICE_ID = "service_j0z0jgx";   
+  const EMAILJS_TEMPLATE_ID = "template_b29kbcw"; 
+  
 
-        // Reviews data
-        let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+  const IS_TEST_MODE = false; // Set to false when you have your credentials
+  
+  // ============================================
+  // END OF EMAILJS CONFIGURATION
+  // ============================================
 
-        // Favorites management
-        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  AOS.init({ duration: 600, once: true, offset: 50 });
+  
+  function createParticles() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 40; i++) {
+      const p = document.createElement('div'); p.className = 'particle';
+      const s = Math.random() * 6 + 2;
+      p.style.width = s + 'px'; p.style.height = s + 'px';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = Math.random() * 20 + 10 + 's';
+      p.style.animationDelay = Math.random() * 10 + 's';
+      container.appendChild(p);
+    }
+  }
+  createParticles();
+  
+  function scrollToElement(id) { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+// recipes image data 
+  const recipes = [
+    { id:1, name:"Thai Green Curry", image:"https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&h=250&fit=crop", ingredients:["coconut milk","tofu","eggplant","basil"], diet:"Vegan", cuisine:"Thai", time:28, difficulty:"Medium", category:"Dinner", servings:3, instructions:"Simmer curry paste, add coconut milk, tofu & veggies.", rating:4.8 },
+    { id:2, name:"Paneer Butter Masala", image:"https://myfoodstory.com/wp-content/uploads/2021/07/restaurant-style-paneer-butter-masala-2.jpg", ingredients:["paneer","onion","tomato","cream"], diet:"Vegetarian", cuisine:"Indian", time:40, difficulty:"Medium", category:"Lunch", servings:4, instructions:"Sauté onion, add tomato puree, spices, then paneer.", rating:4.9 },
+    { id:3, name:"Mediterranean Bowl", image:"https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=250&fit=crop", ingredients:["quinoa","chickpeas","avocado","feta"], diet:"Vegetarian", cuisine:"Italian", time:20, difficulty:"Easy", category:"Lunch", servings:2, instructions:"Layer quinoa, chickpeas, avocado, and feta.", rating:4.7 },
+    { id:4, name:"Berry Protein Smoothie", image:"https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400&h=250&fit=crop", ingredients:["berries","banana","protein powder","almond milk"], diet:"High Protein", cuisine:"Mexican", time:5, difficulty:"Easy", category:"Breakfast", servings:1, instructions:"Blend all ingredients until smooth.", rating:4.6 },
+    { id:5, name:"Mushroom Risotto", image:"https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=250&fit=crop", ingredients:["mushroom","arborio rice","parmesan","broth"], diet:"Vegetarian", cuisine:"Italian", time:35, difficulty:"Medium", category:"Dinner", servings:3, instructions:"Slowly add broth to rice, stir in mushrooms.", rating:4.8 },
+    { id:6, name:"Chicken Stir Fry", image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=250&fit=crop", ingredients:["chicken","bell pepper","broccoli","soy sauce"], diet:"High Protein", cuisine:"Chinese", time:20, difficulty:"Easy", category:"Dinner", servings:3, instructions:"Stir fry chicken and vegetables.", rating:4.7 },
+    { id:7, name:"Chocolate Lava Cake", image:"https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&h=250&fit=crop", ingredients:["chocolate","butter","eggs","flour"], diet:"Vegetarian", cuisine:"Italian", time:25, difficulty:"Medium", category:"Desserts", servings:4, instructions:"Bake for 12 minutes.", rating:4.9 }
+  ];
 
-        // Function to save favorites to localStorage
-        function saveFavorites() {
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-        }
+  let savedRecipes = JSON.parse(localStorage.getItem("savedRecipes")) || [];
+  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  let reviewLikes = JSON.parse(localStorage.getItem("reviewLikes")) || {};
+  let reviewReplies = JSON.parse(localStorage.getItem("reviewReplies")) || {};
+  let currentCategory = "all";
+  let currentRating = 0;
+  let showLimited = true;
+  let carouselIndex = 0;
 
-        // Function to save reviews to localStorage
-        function saveReviews() {
-            localStorage.setItem('reviews', JSON.stringify(reviews));
-        }
+  function showToast(msg) { let t = document.getElementById("toastMsg"); t.innerText = msg; t.style.opacity = "1"; setTimeout(() => t.style.opacity = "0", 2000); }
 
-        // Function to check if a recipe is favorited
-        function isFavorited(recipeId) {
-            return favorites.includes(recipeId);
-        }
+  // Typing Effect
+  const phrases = ["Search by recipe name...", "Find by ingredients...", "Filter by diet...", "Save your favorites!"];
+  let pIdx = 0, cIdx = 0, del = false;
+  function typeEffect() {
+    const div = document.getElementById("typingText");
+    if (!div) return;
+    let cur = phrases[pIdx];
+    if (del) { div.innerHTML = cur.substring(0, cIdx - 1) + '<span class="cursor"></span>'; cIdx--; }
+    else { div.innerHTML = cur.substring(0, cIdx + 1) + '<span class="cursor"></span>'; cIdx++; }
+    if (!del && cIdx === cur.length) { del = true; setTimeout(typeEffect, 2000); }
+    else if (del && cIdx === 0) { del = false; pIdx = (pIdx + 1) % phrases.length; setTimeout(typeEffect, 500); }
+    else { setTimeout(typeEffect, del ? 50 : 100); }
+  }
+  typeEffect();
 
-        // Function to toggle favorite status
-        function toggleFavorite(recipeId) {
-            if (isFavorited(recipeId)) {
-                favorites = favorites.filter(id => id !== recipeId);
-            } else {
-                favorites.push(recipeId);
-            }
-            saveFavorites();
-            renderRecipes();
-            renderFavorites();
-            renderRegionalRecipes();
-        }
+  // Recipe functions
+  function toggleRecipesDisplay() {
+    showLimited = !showLimited;
+    document.getElementById("toggleRecipesBtn").innerHTML = showLimited ? '<i class="fas fa-chevron-down"></i> Show 3 Recipes' : '<i class="fas fa-chevron-up"></i> Show All Recipes';
+    renderRecipes();
+  }
+  document.getElementById("toggleRecipesBtn")?.addEventListener("click", toggleRecipesDisplay);
+  
+  function toggleSave(id) {
+    let idx = savedRecipes.indexOf(id);
+    if (idx === -1) { savedRecipes.push(id); showToast("✅ Recipe saved!"); }
+    else { savedRecipes.splice(idx, 1); showToast("🗑️ Removed from saved"); }
+    localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
+    renderRecipes(); renderSavedRecipes();
+  }
+  
+  function getFilteredRecipes() {
+    let filtered = recipes.filter(r => {
+      if (currentCategory !== "all" && r.category !== currentCategory) return false;
+      let diet = document.getElementById("dietFilter")?.value || "all";
+      if (diet !== "all" && r.diet !== diet) return false;
+      let cuisine = document.getElementById("cuisineFilter")?.value || "all";
+      if (cuisine !== "all" && r.cuisine !== cuisine) return false;
+      let timeVal = document.getElementById("timeFilter")?.value || "all";
+      if (timeVal !== "all") { if (timeVal === "0-30" && r.time > 30) return false; if (timeVal === "30-60" && (r.time <=30 || r.time>60)) return false; }
+      return true;
+    });
+    let nameSearch = document.getElementById("searchName")?.value.toLowerCase().trim() || "";
+    if (nameSearch) filtered = filtered.filter(r => r.name.toLowerCase().includes(nameSearch));
+    let ingSearch = document.getElementById("ingredientsInput")?.value.toLowerCase() || "";
+    if (ingSearch) { let ingList = ingSearch.split(",").map(i=>i.trim()); filtered = filtered.filter(r => ingList.every(ing => r.ingredients.some(ri => ri.toLowerCase().includes(ing)))); }
+    return filtered;
+  }
+  
+  function renderRecipes() {
+    let filtered = getFilteredRecipes();
+    let display = showLimited ? filtered.slice(0, 3) : filtered;
+    let container = document.getElementById("recipeContainer");
+    if (!container) return;
+    if(display.length === 0) { container.innerHTML = "<div style='text-align:center; padding:2rem;'>✨ No recipes found ✨</div>"; return; }
+    container.innerHTML = display.map(r => `<div class="recipe-card" data-id="${r.id}"><img class="recipe-img" src="${r.image}" onerror="this.src='https://placehold.co/400x250/FF7043/white?text=${r.name}'"><div class="recipe-info"><div class="recipe-title">${r.name}</div><div class="recipe-meta"><span>⏱️ ${r.time} min</span><span class="badge">${r.diet}</span><span>🍽️ ${r.servings}</span></div><div class="card-actions"><button class="action-btn save-btn ${savedRecipes.includes(r.id) ? 'saved' : ''}" onclick="event.stopPropagation(); toggleSave(${r.id})"><i class="fas ${savedRecipes.includes(r.id) ? 'fa-check-circle' : 'fa-bookmark'}"></i> ${savedRecipes.includes(r.id) ? 'Saved' : 'Save'}</button></div></div></div>`).join("");
+    document.querySelectorAll(".recipe-card").forEach(c => c.addEventListener("click", () => openRecipeModal(parseInt(c.dataset.id))));
+  }
+  
+  function renderSavedRecipes() {
+    let saved = recipes.filter(r => savedRecipes.includes(r.id));
+    let container = document.getElementById("savedContainer");
+    if (!container) return;
+    if(saved.length === 0) { container.innerHTML = "<div style='text-align:center; padding:1.5rem;'>No saved recipes yet</div>"; return; }
+    container.innerHTML = saved.map(r => `<div class="saved-card" onclick="openRecipeModal(${r.id})"><img src="${r.image}" style="width:100%; height:90px; object-fit:cover; border-radius:8px;"><p style="margin-top:6px; font-weight:500;">${r.name}</p><button class="action-btn" onclick="event.stopPropagation(); toggleSave(${r.id})" style="margin-top:6px;">Remove</button></div>`).join("");
+  }
+  
+  function renderFeaturedCarousel() {
+    const container = document.getElementById("featuredCarousel");
+    if (!container) return;
+    container.innerHTML = recipes.map(r => `<div class="featured-item" onclick="openRecipeModal(${r.id})"><img class="featured-img" src="${r.image}"><div class="featured-info"><h3>${r.name}</h3><div><span class="badge">${r.diet}</span> <span>⏱️ ${r.time} min</span></div></div></div>`).join("");
+    updateCarousel();
+  }
+  
+  function updateCarousel() {
+    const carousel = document.getElementById("featuredCarousel");
+    if (!carousel?.children.length) return;
+    const itemWidth = carousel.children[0]?.offsetWidth || 250;
+    const scroll = carouselIndex * (itemWidth + 16);
+    carousel.style.transform = `translateX(-${scroll}px)`;
+  }
+  
+  document.getElementById("nextBtn")?.addEventListener("click", () => { if (carouselIndex < recipes.length - 4) carouselIndex++; updateCarousel(); });
+  document.getElementById("prevBtn")?.addEventListener("click", () => { if (carouselIndex > 0) carouselIndex--; updateCarousel(); });
+  window.addEventListener('resize', () => updateCarousel());
 
-        // Function to toggle recipe expansion
-        function toggleRecipeExpansion(recipeId) {
-            const recipeCard = document.querySelector(`.recipe-card[data-recipe-id="${recipeId}"]`);
-            const isExpanded = recipeCard.classList.contains('expanded');
-            
-            // Collapse all expanded recipes first
-            document.querySelectorAll('.recipe-card.expanded').forEach(card => {
-                card.classList.remove('expanded');
-            });
-            
-            // If the clicked recipe wasn't already expanded, expand it
-            if (!isExpanded) {
-                recipeCard.classList.add('expanded');
-                
-                // Scroll to the expanded recipe
-                recipeCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
+  // Review Functions
+  function updateAverageRating() {
+    if (reviews.length === 0) {
+      document.getElementById("avgRating").innerText = "0.0";
+      document.getElementById("avgStars").innerHTML = "☆☆☆☆☆";
+      document.getElementById("reviewCount").innerText = "0";
+      return;
+    }
+    let sum = reviews.reduce((a, b) => a + b.rating, 0);
+    let avg = sum / reviews.length;
+    document.getElementById("avgRating").innerText = avg.toFixed(1);
+    let fullStars = Math.floor(avg);
+    let stars = "★".repeat(fullStars) + "☆".repeat(5 - fullStars);
+    document.getElementById("avgStars").innerHTML = stars;
+    document.getElementById("reviewCount").innerText = reviews.length;
+  }
 
-        // Function to create recipe card HTML
-        function createRecipeCard(recipe) {
-            const isFav = isFavorited(recipe.id);
-            const recipeReviews = reviews.filter(review => review.recipeId === recipe.id);
-            const averageRating = recipeReviews.length > 0 
-                ? (recipeReviews.reduce((sum, review) => sum + review.rating, 0) / recipeReviews.length).toFixed(1)
-                : 0;
-            
-            return `
-                <div class="recipe-card" data-recipe-id="${recipe.id}" data-categories="${recipe.categories.join(' ')}">
-                    <div class="recipe-image" style="background-image: url('${recipe.image}');">
-                        <div class="recipe-badge">${recipe.badge}</div>
-                    </div>
-                    <div class="recipe-content">
-                        <h2 class="recipe-title"><i class="${recipe.icon}"></i> ${recipe.title}</h2>
-                        <div class="recipe-meta">
-                            <div class="time"><i class="far fa-clock"></i> ${recipe.time}</div>
-                            <div class="difficulty"><i class="fas fa-signal"></i> ${recipe.difficulty}</div>
-                        </div>
-                        <div class="dietary-tags">
-                            ${recipe.dietaryTags.map(tag => `<span class="dietary-tag">${tag}</span>`).join('')}
-                        </div>
-                        <div class="ingredients">
-                            <h3><i class="fas fa-list"></i> Ingredients</h3>
-                            <ul>
-                                ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <div class="instructions">
-                            <h3><i class="fas fa-mortar-pestle"></i> Instructions</h3>
-                            <ol>
-                                ${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join('')}
-                            </ol>
-                        </div>
-                        <div class="variations">
-                            <h3><i class="fas fa-exchange-alt"></i> Variations & Substitutions</h3>
-                            ${recipe.variations.map(variation => `<p>${variation}</p>`).join('')}
-                        </div>
-                        
-                        <div class="recipe-reviews">
-                            <h3><i class="fas fa-star"></i> Reviews</h3>
-                            ${recipeReviews.length > 0 ? `
-                                <div class="review-summary">
-                                    <div class="average-rating">${averageRating}</div>
-                                    <div>
-                                        <div class="review-stars">${getStarRating(averageRating)}</div>
-                                        <div class="rating-count">${recipeReviews.length} review${recipeReviews.length !== 1 ? 's' : ''}</div>
-                                    </div>
-                                </div>
-                                <div class="reviews-list">
-                                    ${recipeReviews.slice(0, 2).map(review => `
-                                        <div class="review-card">
-                                            <div class="review-header">
-                                                <div class="reviewer-name">${review.name}</div>
-                                                <div class="review-date">${formatDate(review.date)}</div>
-                                            </div>
-                                            <div class="review-stars">${getStarRating(review.rating)}</div>
-                                            <div class="review-text">${review.text}</div>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                                ${recipeReviews.length > 2 ? `<p><a href="#" class="view-all-reviews" data-recipe-id="${recipe.id}">View all ${recipeReviews.length} reviews</a></p>` : ''}
-                            ` : `
-                                <p>No reviews yet. Be the first to review this recipe!</p>
-                            `}
-                        </div>
-                        
-                        <button class="btn btn-view-recipe" data-recipe-id="${recipe.id}">
-                            <i class="fas fa-book-open"></i> View Full Recipe
-                        </button>
-                        <div class="recipe-actions">
-                            <button class="btn btn-primary save-recipe-btn" data-recipe-id="${recipe.id}">
-                                <i class="${isFav ? 'fas' : 'far'} fa-heart"></i> ${isFav ? 'Saved' : 'Save Recipe'}
-                            </button>
-                            <button class="btn btn-secondary print-recipe-btn"><i class="fas fa-print"></i> Print</button>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
+  function toggleReviewLike(reviewId) {
+    if (reviewLikes[reviewId]) delete reviewLikes[reviewId];
+    else reviewLikes[reviewId] = true;
+    localStorage.setItem("reviewLikes", JSON.stringify(reviewLikes));
+    renderReviews();
+  }
 
-        // Function to get star rating HTML
-        function getStarRating(rating) {
-            const fullStars = Math.floor(rating);
-            const halfStar = rating % 1 >= 0.5;
-            const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-            
-            return '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
-        }
+  function addReply(reviewId) {
+    let replyText = document.getElementById(`reply-input-${reviewId}`)?.value.trim();
+    if (!replyText) return;
+    if (!reviewReplies[reviewId]) reviewReplies[reviewId] = [];
+    reviewReplies[reviewId].push({ text: replyText, date: new Date().toISOString() });
+    localStorage.setItem("reviewReplies", JSON.stringify(reviewReplies));
+    document.getElementById(`reply-input-${reviewId}`).value = "";
+    renderReviews();
+  }
 
-        // Function to format date
-        function formatDate(dateString) {
-            const options = { year: 'numeric', month: 'short', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString(undefined, options);
-        }
+  function renderReviews() {
+    let container = document.getElementById("reviewsList");
+    if (!container) return;
+    if (reviews.length === 0) { container.innerHTML = "<div style='text-align:center; padding:2rem;'>No reviews yet. Be the first to share your experience!</div>"; return; }
+    const avatars = ['👩‍🍳', '👨‍🍳', '🍳', '🥗', '🍕', '🍜', '🍰'];
+    container.innerHTML = reviews.map((r, idx) => {
+      let replySection = "";
+      if (reviewReplies[`review_${idx}`] && reviewReplies[`review_${idx}`].length > 0) {
+        replySection = `<div class="review-reply">${reviewReplies[`review_${idx}`].map(rep => `<div class="reply-text"><i class="fas fa-reply"></i> ${rep.text}</div>`).join("")}</div>`;
+      }
+      return `
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">${avatars[Math.floor(Math.random() * avatars.length)]}</div>
+            <div class="review-user"><h4>${r.name}</h4><div class="review-date">${new Date(r.date).toLocaleDateString()}</div></div>
+          </div>
+          <div class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+          <div class="review-text">${r.comment}</div>
+          <div class="review-footer">
+            <button class="review-like ${reviewLikes[`review_${idx}`] ? 'liked' : ''}" onclick="toggleReviewLike('review_${idx}')"><i class="fas fa-heart"></i> <span>${reviewLikes[`review_${idx}`] ? 1 : 0}</span></button>
+            <button class="review-like" onclick="document.getElementById('reply-form-${idx}').style.display = document.getElementById('reply-form-${idx}').style.display === 'none' ? 'flex' : 'none'"><i class="fas fa-reply"></i> Reply</button>
+          </div>
+          ${replySection}
+          <div id="reply-form-${idx}" class="reply-form" style="display: none;">
+            <input type="text" id="reply-input-review_${idx}" placeholder="Write a reply...">
+            <button onclick="addReply('review_${idx}')">Post</button>
+          </div>
+        </div>
+      `;
+    }).join("");
+    updateAverageRating();
+  }
 
-        // Function to render regional recipes
-        function renderRegionalRecipes() {
-            const regionsGrid = document.getElementById('regionsGrid');
-            
-            if (!regionsGrid) return;
-            
-            regionsGrid.innerHTML = regions.map(region => {
-                const regionRecipes = recipes.filter(recipe => recipe.region === region.id);
-                
-                return `
-                    <div class="region-card">
-                        <div class="region-header" style="background: linear-gradient(135deg, ${region.color}, ${region.color}99)">
-                            <div class="region-flag">${region.flag}</div>
-                            <h3>${region.name}</h3>
-                            <p>${region.description}</p>
-                        </div>
-                        <div class="region-recipes">
-                            ${regionRecipes.map(recipe => `
-                                <div class="region-recipe-item">
-                                    <a href="#" class="view-recipe-link" data-recipe-id="${recipe.id}">
-                                        ${recipe.title}
-                                    </a>
-                                    <span class="recipe-time">${recipe.time}</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-            }).join('');
-            
-            // Attach event listeners to regional recipe links
-            document.querySelectorAll('.view-recipe-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const recipeId = parseInt(this.getAttribute('data-recipe-id'));
-                    
-                    // Show recipes page and expand the selected recipe
-                    showPage('recipes');
-                    
-                    // Wait for recipes to render, then expand the selected one
-                    setTimeout(() => {
-                        const recipeCard = document.querySelector(`.recipe-card[data-recipe-id="${recipeId}"]`);
-                        if (recipeCard) {
-                            toggleRecipeExpansion(recipeId);
-                            const viewButton = recipeCard.querySelector('.btn-view-recipe');
-                            viewButton.innerHTML = '<i class="fas fa-times"></i> Close Recipe';
-                        }
-                    }, 100);
-                });
-            });
-        }
+  // Star rating input
+  document.querySelectorAll("#starRatingWidget i").forEach(s => {
+    s.addEventListener("click", function() {
+      currentRating = parseInt(this.dataset.rating);
+      document.querySelectorAll("#starRatingWidget i").forEach(st => {
+        if (parseInt(st.dataset.rating) <= currentRating) st.className = "fas fa-star";
+        else st.className = "far fa-star";
+      });
+    });
+  });
 
-        // Function to render recipes
-        function renderRecipes() {
-            const recipesContainer = document.getElementById('recipesContainer');
-            const allRecipesContainer = document.getElementById('allRecipesContainer');
-            
-            if (recipesContainer) {
-                recipesContainer.innerHTML = recipes.map(recipe => createRecipeCard(recipe)).join('');
-            }
-            
-            if (allRecipesContainer) {
-                allRecipesContainer.innerHTML = recipes.map(recipe => createRecipeCard(recipe)).join('');
-            }
-            
-            // Re-attach event listeners
-            attachEventListeners();
-        }
+  document.getElementById("submitReviewBtn").addEventListener("click", () => {
+    let name = document.getElementById("reviewerName").value.trim();
+    let comment = document.getElementById("reviewText").value.trim();
+    if (!name || !comment || currentRating === 0) { showToast("Please fill all fields and select a rating!"); return; }
+    reviews.unshift({ name, rating: currentRating, comment, date: new Date().toISOString() });
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+    document.getElementById("reviewerName").value = "";
+    document.getElementById("reviewText").value = "";
+    currentRating = 0;
+    document.querySelectorAll("#starRatingWidget i").forEach(s => s.className = "far fa-star");
+    renderReviews();
+    showToast("✅ Review submitted! Thank you for your feedback.");
+  });
 
-        // Function to render reviews
-        function renderReviews() {
-            const reviewsList = document.getElementById('reviewsList');
-            
-            if (!reviewsList) return;
-            
-            if (reviews.length === 0) {
-                reviewsList.innerHTML = `
-                    <div class="no-reviews">
-                        <i class="far fa-star"></i>
-                        <h3>No reviews yet</h3>
-                        <p>Be the first to share your experience with our recipes!</p>
-                    </div>
-                `;
-            } else {
-                reviewsList.innerHTML = reviews.map(review => {
-                    const recipe = recipes.find(r => r.id === review.recipeId);
-                    return `
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="reviewer-name">${review.name}</div>
-                                <div class="review-date">${formatDate(review.date)}</div>
-                            </div>
-                            <div class="review-stars">${getStarRating(review.rating)}</div>
-                            <div class="review-text">${review.text}</div>
-                            <div style="margin-top: 0.5rem; font-style: italic;">
-                                Review for: <a href="#" class="view-recipe-link" data-recipe-id="${review.recipeId}">${recipe ? recipe.title : 'Unknown Recipe'}</a>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-                
-                // Attach event listeners to recipe links in reviews
-                document.querySelectorAll('.view-recipe-link').forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const recipeId = parseInt(this.getAttribute('data-recipe-id'));
-                        
-                        // Show recipes page and expand the selected recipe
-                        showPage('recipes');
-                        
-                        // Wait for recipes to render, then expand the selected one
-                        setTimeout(() => {
-                            const recipeCard = document.querySelector(`.recipe-card[data-recipe-id="${recipeId}"]`);
-                            if (recipeCard) {
-                                toggleRecipeExpansion(recipeId);
-                                const viewButton = recipeCard.querySelector('.btn-view-recipe');
-                                viewButton.innerHTML = '<i class="fas fa-times"></i> Close Recipe';
-                            }
-                        }, 100);
-                    });
-                });
-            }
-        }
+  // ============================================
+  // EMAILJS CONTACT FORM HANDLER
+  // ============================================
+  async function sendEmail() {
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const message = document.getElementById("contactMsg").value.trim();
+    
+    if (!name || !email || !message) {
+      showToast("Please fill all required fields!");
+      return;
+    }
+    
+    if (!email.includes("@") || !email.includes(".")) {
+      showToast("Please enter a valid email address!");
+      return;
+    }
+    
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+      to_email: "support@flavorfindpro.com",
+      reply_to: email
+    };
+    
+    // Test mode or actual EmailJS
+    if (IS_TEST_MODE) {
+      console.log("📧 TEST MODE - Email would be sent with:", templateParams);
+      showToast("✅ Demo: Message received! (Configure EmailJS to send real emails)");
+      document.getElementById("contactName").value = "";
+      document.getElementById("contactEmail").value = "";
+      document.getElementById("contactMsg").value = "";
+      const div = document.getElementById("contactSuccess");
+      div.innerHTML = `<i class="fas fa-check-circle"></i> Thank you ${name}! We'll respond soon. (Demo Mode)`;
+      div.style.display = "block";
+      setTimeout(() => div.style.display = "none", 5000);
+      return;
+    }
+    
+    try {
+      const response = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+      console.log("✅ Email sent successfully!", response);
+      showToast("✅ Message sent successfully! We'll get back to you soon.");
+      document.getElementById("contactName").value = "";
+      document.getElementById("contactEmail").value = "";
+      document.getElementById("contactMsg").value = "";
+      const div = document.getElementById("contactSuccess");
+      div.innerHTML = `<i class="fas fa-check-circle"></i> Thank you ${name}! We'll respond within 24 hours.`;
+      div.style.display = "block";
+      setTimeout(() => div.style.display = "none", 5000);
+    } catch (error) {
+      console.error("❌ EmailJS Error:", error);
+      showToast("❌ Failed to send message. Please try again later.");
+    }
+  }
+  
+  document.getElementById("sendContactBtn").addEventListener("click", sendEmail);
 
-        // Function to populate recipe dropdown
-        function populateRecipeDropdown() {
-            const recipeSelect = document.getElementById('reviewRecipe');
-            if (!recipeSelect) return;
-            
-            recipeSelect.innerHTML = '<option value="">Choose a recipe...</option>' +
-                recipes.map(recipe => `<option value="${recipe.id}">${recipe.title}</option>`).join('');
-        }
+  function openRecipeModal(id) {
+    let r = recipes.find(r => r.id === id);
+    document.getElementById("modalTitle").innerText = r.name;
+    document.getElementById("modalImg").src = r.image;
+    document.getElementById("modalIngredients").innerHTML = r.ingredients.map(i => `<span style="background:var(--accent-soft); padding:3px 8px; border-radius:20px; margin:2px; display:inline-block;">${i}</span>`).join("");
+    document.getElementById("modalInstructions").innerHTML = r.instructions;
+    document.getElementById("modalTime").innerHTML = r.time + " minutes";
+    document.getElementById("modalServings").innerHTML = r.servings;
+    document.getElementById("modalDiff").innerHTML = r.difficulty;
+    document.getElementById("modalCuisine").innerHTML = r.cuisine;
+    document.getElementById("recipeModal").style.display = "flex";
+  }
 
-        // Function to render favorites
-        function renderFavorites() {
-            const favoritesContainer = document.getElementById('favoritesContainer');
-            
-            if (!favoritesContainer) return;
-            
-            if (favorites.length === 0) {
-                favoritesContainer.innerHTML = `
-                    <div class="empty-favorites">
-                        <i class="far fa-heart"></i>
-                        <h3>No favorites yet</h3>
-                        <p>You haven't saved any recipes to your favorites. Browse our recipes and click the heart icon to save your favorites!</p>
-                        <button class="btn btn-primary" id="browseRecipesBtn">Browse Recipes</button>
-                    </div>
-                `;
-                
-                document.getElementById('browseRecipesBtn').addEventListener('click', () => {
-                    showPage('recipes');
-                });
-            } else {
-                const favoriteRecipes = recipes.filter(recipe => favorites.includes(recipe.id));
-                favoritesContainer.innerHTML = favoriteRecipes.map(recipe => createRecipeCard(recipe)).join('');
-                
-                // Re-attach event listeners
-                attachEventListeners();
-            }
-        }
+  function showSuggestions() {
+    let q = document.getElementById("searchName")?.value.toLowerCase();
+    let div = document.getElementById("suggestionsDropdown");
+    if (!div) return;
+    if (!q || q.length < 2) { div.style.display = "none"; return; }
+    let matches = recipes.filter(r => r.name.toLowerCase().includes(q)).slice(0, 5);
+    if (matches.length) {
+      div.style.display = "block";
+      div.innerHTML = matches.map(m => `<div class="suggestion-item" onclick="selectSuggestion('${m.name}')"><i class="fas fa-search"></i> ${m.name}</div>`).join("");
+    } else div.style.display = "none";
+  }
+  
+  function selectSuggestion(n) { document.getElementById("searchName").value = n; document.getElementById("suggestionsDropdown").style.display = "none"; renderRecipes(); }
+  document.getElementById("searchName")?.addEventListener("input", showSuggestions);
+  document.addEventListener("click", (e) => { if (!e.target.closest(".search-input-group")) { let d = document.getElementById("suggestionsDropdown"); if (d) d.style.display = "none"; } });
+  document.getElementById("searchBtn")?.addEventListener("click", () => renderRecipes());
+  document.getElementById("searchName")?.addEventListener("keyup", () => renderRecipes());
+  document.getElementById("ingredientsInput")?.addEventListener("keyup", () => renderRecipes());
+  document.getElementById("dietFilter")?.addEventListener("change", () => renderRecipes());
+  document.getElementById("cuisineFilter")?.addEventListener("change", () => renderRecipes());
+  document.getElementById("timeFilter")?.addEventListener("change", () => renderRecipes());
+  document.getElementById("closeModal")?.addEventListener("click", () => document.getElementById("recipeModal").style.display = "none");
+  window.onclick = (e) => { if (e.target === document.getElementById("recipeModal")) document.getElementById("recipeModal").style.display = "none"; };
+  document.querySelectorAll(".category-card").forEach(card => {
+    card.addEventListener("click", () => { currentCategory = card.dataset.cat; renderRecipes(); showToast(`Showing ${currentCategory} recipes`); scrollToElement('recipes'); });
+  });
+  
+  function setCategoryAndScroll(cat) { currentCategory = cat; renderRecipes(); scrollToElement('recipes'); showToast(`Showing ${cat} recipes`); }
+  window.setCategoryAndScroll = setCategoryAndScroll;
+  
+  const darkToggle = document.getElementById("darkModeToggle");
+  function toggleDark() { document.body.classList.toggle("dark"); localStorage.setItem("darkMode", document.body.classList.contains("dark")); darkToggle.innerHTML = document.body.classList.contains("dark") ? '<i class="fas fa-sun"></i> Light' : '<i class="fas fa-moon"></i> Dark'; }
+  darkToggle.addEventListener("click", toggleDark);
+  if (localStorage.getItem("darkMode") === "true") { document.body.classList.add("dark"); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light'; }
+  
+  window.scrollToElement = scrollToElement;
+  window.openRecipeModal = openRecipeModal;
+  window.toggleSave = toggleSave;
+  window.selectSuggestion = selectSuggestion;
+  window.toggleReviewLike = toggleReviewLike;
+  window.addReply = addReply;
 
-        // Function to show a specific page
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page-section').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show the selected page
-            document.getElementById(`${pageId}-page`).classList.add('active');
-            
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`.nav-link[data-page="${pageId}"]`).classList.add('active');
-            
-            // Render content for the page
-            if (pageId === 'favorites') {
-                renderFavorites();
-            } else if (pageId === 'recipes') {
-                renderRecipes();
-            } else if (pageId === 'regional') {
-                renderRegionalRecipes();
-            } else if (pageId === 'reviews') {
-                renderReviews();
-            }
-            
-            // Close mobile menu if open
-            document.getElementById('navLinks').classList.remove('active');
-        }
-
-        // Function to attach event listeners
-        function attachEventListeners() {
-            // Save recipe buttons
-            document.querySelectorAll('.save-recipe-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const recipeId = parseInt(this.getAttribute('data-recipe-id'));
-                    toggleFavorite(recipeId);
-                    
-                    // Show save modal if adding to favorites
-                    if (!isFavorited(recipeId)) {
-                        const saveModal = document.getElementById('saveModal');
-                        saveModal.style.display = 'flex';
-                    }
-                });
-            });
-            
-            // View full recipe buttons
-            document.querySelectorAll('.btn-view-recipe').forEach(button => {
-                button.addEventListener('click', function() {
-                    const recipeId = parseInt(this.getAttribute('data-recipe-id'));
-                    toggleRecipeExpansion(recipeId);
-                    
-                    // Update button text
-                    const recipeCard = document.querySelector(`.recipe-card[data-recipe-id="${recipeId}"]`);
-                    const isExpanded = recipeCard.classList.contains('expanded');
-                    this.innerHTML = isExpanded ? 
-                        '<i class="fas fa-times"></i> Close Recipe' : 
-                        '<i class="fas fa-book-open"></i> View Full Recipe';
-                });
-            });
-            
-            // Print recipe buttons
-            document.querySelectorAll('.print-recipe-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const printModal = document.getElementById('printModal');
-                    printModal.style.display = 'flex';
-                });
-            });
-            
-            // Filter buttons
-            document.querySelectorAll('.filter-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons in the same container
-                    this.parentElement.querySelectorAll('.filter-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                    });
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const filter = this.getAttribute('data-filter');
-                    const recipeCards = this.closest('.page-section').querySelectorAll('.recipe-card');
-                    
-                    // Filter recipes
-                    recipeCards.forEach(card => {
-                        if (filter === 'all') {
-                            card.style.display = 'block';
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 10);
-                        } else {
-                            const categories = card.getAttribute('data-categories');
-                            if (categories.includes(filter)) {
-                                card.style.display = 'block';
-                                setTimeout(() => {
-                                    card.style.opacity = '1';
-                                    card.style.transform = 'translateY(0)';
-                                }, 10);
-                            } else {
-                                card.style.opacity = '0';
-                                card.style.transform = 'translateY(20px)';
-                                setTimeout(() => {
-                                    card.style.display = 'none';
-                                }, 300);
-                            }
-                        }
-                    });
-                });
-            });
-            
-            // Star rating interaction
-            const stars = document.querySelectorAll('.star');
-            stars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const rating = parseInt(this.getAttribute('data-rating'));
-                    document.getElementById('reviewRating').value = rating;
-                    
-                    // Update star display
-                    stars.forEach(s => {
-                        if (parseInt(s.getAttribute('data-rating')) <= rating) {
-                            s.classList.add('active');
-                        } else {
-                            s.classList.remove('active');
-                        }
-                    });
-                });
-                
-                star.addEventListener('mouseover', function() {
-                    const rating = parseInt(this.getAttribute('data-rating'));
-                    
-                    stars.forEach(s => {
-                        if (parseInt(s.getAttribute('data-rating')) <= rating) {
-                            s.classList.add('active');
-                        } else {
-                            s.classList.remove('active');
-                        }
-                    });
-                });
-            });
-            
-            // Reset stars when mouse leaves the rating container
-            document.getElementById('starRating').addEventListener('mouseleave', function() {
-                const currentRating = parseInt(document.getElementById('reviewRating').value);
-                
-                stars.forEach(s => {
-                    if (parseInt(s.getAttribute('data-rating')) <= currentRating) {
-                        s.classList.add('active');
-                    } else {
-                        s.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Review form submission
-            document.getElementById('reviewForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const recipeId = parseInt(document.getElementById('reviewRecipe').value);
-                const name = document.getElementById('reviewerName').value;
-                const rating = parseInt(document.getElementById('reviewRating').value);
-                const text = document.getElementById('reviewText').value;
-                
-                if (rating === 0) {
-                    alert('Please select a rating');
-                    return;
-                }
-                
-                const newReview = {
-                    id: Date.now(),
-                    recipeId: recipeId,
-                    name: name,
-                    rating: rating,
-                    text: text,
-                    date: new Date().toISOString()
-                };
-                
-                reviews.push(newReview);
-                saveReviews();
-                
-                // Reset form
-                this.reset();
-                document.getElementById('reviewRating').value = 0;
-                stars.forEach(s => s.classList.remove('active'));
-                
-                // Show success message
-                alert('Thank you for your review!');
-                
-                // Update reviews display
-                renderReviews();
-                renderRecipes();
-            });
-            
-            // View all reviews links
-            document.querySelectorAll('.view-all-reviews').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const recipeId = parseInt(this.getAttribute('data-recipe-id'));
-                    
-                    // Show reviews page and filter by recipe
-                    showPage('reviews');
-                    
-                    // Filter reviews by recipe
-                    const recipeReviews = reviews.filter(review => review.recipeId === recipeId);
-                    const reviewsList = document.getElementById('reviewsList');
-                    
-                    if (recipeReviews.length === 0) {
-                        reviewsList.innerHTML = `
-                            <div class="no-reviews">
-                                <i class="far fa-star"></i>
-                                <h3>No reviews yet</h3>
-                                <p>Be the first to review this recipe!</p>
-                            </div>
-                        `;
-                    } else {
-                        const recipe = recipes.find(r => r.id === recipeId);
-                        reviewsList.innerHTML = `
-                            <h3 style="margin-bottom: 1rem;">Reviews for ${recipe ? recipe.title : 'Unknown Recipe'}</h3>
-                            ${recipeReviews.map(review => `
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <div class="reviewer-name">${review.name}</div>
-                                        <div class="review-date">${formatDate(review.date)}</div>
-                                    </div>
-                                    <div class="review-stars">${getStarRating(review.rating)}</div>
-                                    <div class="review-text">${review.text}</div>
-                                </div>
-                            `).join('')}
-                        `;
-                    }
-                });
-            });
-        }
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Render initial content
-            renderRecipes();
-            renderFavorites();
-            renderRegionalRecipes();
-            renderReviews();
-            populateRecipeDropdown();
-            
-            // Navigation
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const page = this.getAttribute('data-page');
-                    showPage(page);
-                    
-                    // Close mobile menu after navigation
-                    document.getElementById('navLinks').classList.remove('active');
-                });
-            });
-            
-            // Mobile menu toggle
-            document.getElementById('mobileToggle').addEventListener('click', function() {
-                document.getElementById('navLinks').classList.toggle('active');
-            });
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.nav-container') && document.getElementById('navLinks').classList.contains('active')) {
-                    document.getElementById('navLinks').classList.remove('active');
-                }
-            });
-            
-            // Scroll to top button
-            const scrollTop = document.querySelector('.scroll-top');
-            
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    scrollTop.classList.add('active');
-                } else {
-                    scrollTop.classList.remove('active');
-                }
-            });
-            
-            scrollTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Close modals
-            document.getElementById('closePrintModal').addEventListener('click', () => {
-                document.getElementById('printModal').style.display = 'none';
-            });
-            
-            document.getElementById('cancelPrint').addEventListener('click', () => {
-                document.getElementById('printModal').style.display = 'none';
-            });
-            
-            document.getElementById('confirmPrint').addEventListener('click', () => {
-                document.getElementById('printModal').style.display = 'none';
-                window.print();
-            });
-            
-            document.getElementById('closeSaveModal').addEventListener('click', () => {
-                document.getElementById('saveModal').style.display = 'none';
-            });
-            
-            document.getElementById('closeSave').addEventListener('click', () => {
-                document.getElementById('saveModal').style.display = 'none';
-            });
-            
-            document.getElementById('viewFavorites').addEventListener('click', () => {
-                document.getElementById('saveModal').style.display = 'none';
-                showPage('favorites');
-            });
-            
-            // Newsletter form
-            document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = document.getElementById('newsletterEmail').value;
-                if (email) {
-                    alert(`Thank you for subscribing with: ${email}\nYou'll receive our weekly recipe inspiration soon!`);
-                    document.getElementById('newsletterEmail').value = '';
-                }
-            });
-            
-            // Search functionality
-            function setupSearch(inputId) {
-                const searchInput = document.getElementById(inputId);
-                if (!searchInput) return;
-                
-                searchInput.addEventListener('input', function() {
-                    const searchTerm = this.value.toLowerCase();
-                    const activePage = document.querySelector('.page-section.active');
-                    
-                    if (activePage.id === 'regional-page') {
-                        // Search in regional page
-                        const regionCards = activePage.querySelectorAll('.region-card');
-                        
-                        regionCards.forEach(card => {
-                            const regionName = card.querySelector('h3').textContent.toLowerCase();
-                            const recipeItems = card.querySelectorAll('.region-recipe-item');
-                            
-                            let hasMatch = regionName.includes(searchTerm);
-                            
-                            recipeItems.forEach(item => {
-                                const recipeName = item.querySelector('a').textContent.toLowerCase();
-                                if (recipeName.includes(searchTerm)) {
-                                    hasMatch = true;
-                                    item.style.display = 'flex';
-                                } else {
-                                    item.style.display = 'none';
-                                }
-                            });
-                            
-                            if (hasMatch || searchTerm === '') {
-                                card.style.display = 'block';
-                                recipeItems.forEach(item => item.style.display = 'flex');
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        });
-                    } else if (activePage.id === 'reviews-page') {
-                        // Search in reviews page
-                        const reviewCards = activePage.querySelectorAll('.review-card');
-                        
-                        reviewCards.forEach(card => {
-                            const reviewerName = card.querySelector('.reviewer-name').textContent.toLowerCase();
-                            const reviewText = card.querySelector('.review-text').textContent.toLowerCase();
-                            const recipeName = card.querySelector('.view-recipe-link') ? card.querySelector('.view-recipe-link').textContent.toLowerCase() : '';
-                            
-                            if (reviewerName.includes(searchTerm) || reviewText.includes(searchTerm) || recipeName.includes(searchTerm)) {
-                                card.style.display = 'block';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        });
-                    } else {
-                        // Search in recipes pages
-                        const recipeCards = activePage.querySelectorAll('.recipe-card');
-                        
-                        recipeCards.forEach(card => {
-                            const title = card.querySelector('.recipe-title').textContent.toLowerCase();
-                            const ingredients = card.querySelector('.ingredients').textContent.toLowerCase();
-                            const tags = card.querySelector('.dietary-tags').textContent.toLowerCase();
-                            
-                            if (title.includes(searchTerm) || ingredients.includes(searchTerm) || tags.includes(searchTerm)) {
-                                card.style.display = 'block';
-                                setTimeout(() => {
-                                    card.style.opacity = '1';
-                                    card.style.transform = 'translateY(0)';
-                                }, 10);
-                            } else {
-                                card.style.opacity = '0';
-                                card.style.transform = 'translateY(20px)';
-                                setTimeout(() => {
-                                    card.style.display = 'none';
-                                }, 300);
-                            }
-                        });
-                    }
-                });
-            }
-            
-            // Setup both search inputs
-            setupSearch('searchInput');
-            setupSearch('mobileSearchInput');
-            
-            // Close modals when clicking outside
-            window.addEventListener('click', (e) => {
-                if (e.target === document.getElementById('printModal')) {
-                    document.getElementById('printModal').style.display = 'none';
-                }
-                if (e.target === document.getElementById('saveModal')) {
-                    document.getElementById('saveModal').style.display = 'none';
-                }
-            });
-            
-            // Prevent default behavior for touch events on interactive elements
-            document.querySelectorAll('.btn, .filter-btn, .star').forEach(element => {
-                element.addEventListener('touchstart', function(e) {
-                    // Prevent double-tap zoom
-                    if (e.touches.length > 1) {
-                        e.preventDefault();
-                    }
-                }, { passive: false });
-            });
-        });
+  renderRecipes();
+  renderSavedRecipes();
+  renderReviews();
+  renderFeaturedCarousel();
