@@ -16,7 +16,7 @@
   // EMAILJS CONFIGURATION
   // ============================================
   // Step 1: Initialize EmailJS with your Public Key
-  emailjs.init("opYYBAzptYXVZypkl");  // 🔴 REPLACE THIS with your EmailJS Public Key
+  emailjs.init("opYYBAzptYXVZypkl");  
   
   // Step 2: Set your Service ID and Template ID
   const EMAILJS_SERVICE_ID = "service_j0z0jgx";   
